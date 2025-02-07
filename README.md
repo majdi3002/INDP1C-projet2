@@ -16,18 +16,3 @@ We are Team 1 in C++ Project
 [![Majdi Dridi](https://img.shields.io/badge/-Majdi_Dridi-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:Majdi.dridi@supcom.tn?subject=Contact%20from%20GitHub)
 [![Mouhaned Mouzayen](https://img.shields.io/badge/-Mouhaned_Mouzayen-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:mouhaned.mouzayen@supcom.tn?subject=Contact%20from%20GitHub)
 
-## 📊 Site Visits in the Last Month
-<p id="visitCount">Loading...</p>
-
-<script>
-    function updateVisitCount() {
-        let count = localStorage.getItem('visitCount');
-        if (!count) {
-            count = 0;
-        }
-        count = parseInt(count) + 1;
-        localStorage.setItem('visitCount', count);
-        document.getElementById('visitCount').innerText = `Total Visits: ${count}`;
-    }
-    updateVisitCount();
-</script>
