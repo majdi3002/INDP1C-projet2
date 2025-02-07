@@ -23,7 +23,14 @@ We are Team 1 in C++ Project
     async function fetchVisitCount() {
         try {
             let response = await fetch('https://your-backend-api.com/visits');
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
             let data = await response.json();
+            console.log("API Response:", data);
+            if (!data.count && data.count !== 0) {
+                throw new Error("Invalid response format: 'count' property missing");
+            }
             document.getElementById('visitCount').innerText = `Total Visits: ${data.count}`;
         } catch (error) {
             console.error('Error fetching visit count:', error);
