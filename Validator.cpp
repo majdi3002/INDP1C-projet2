@@ -1,13 +1,15 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <cctype>
 using namespace std;
 
-class Ivalidator {
+class IValidator {
 public:
-    virtual ~Ivalidator() = default;
+    virtual ~IValidator() = default;
     virtual bool validate(const string& input) const = 0;
 };
 
-class PasswordValidator : public Ivalidator {
+class PasswordValidator : public IValidator {
 public:
     bool validate(const string& password) const override {
         if (password.length() < 8) return false;
