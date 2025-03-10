@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Validator {
+class Ivalidator {
 public:
-    virtual ~Validator() = default;
+    virtual ~Ivalidator() = default;
     virtual bool validate(const string& input) const = 0;
 };
 
-class PasswordValidator : public Validator {
+class PasswordValidator : public Ivalidator {
 public:
     bool validate(const string& password) const override {
         if (password.length() < 8) return false;
