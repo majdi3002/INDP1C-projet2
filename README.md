@@ -7,7 +7,9 @@ We are Team 1 in the C++ Project. Our project focuses on creating a user managem
 **About Us**  
 We are a dedicated team working on a C++ project to build a robust user management system.
 
-<img src="https://camo.githubusercontent.com/6f7b76611449b965092aee7c4bf135e656f4e9416189c0b84020fd9853cd1f93/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f54456e586b637348725034596564436868412f67697068792e676966" width="300px" align="right" alt="Team Work Animation">
+<div align="center">
+    <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
+</div>
 
 # <b> Let's Connect..!</b><img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/handshake.gif" width ="80">
 
@@ -53,8 +55,6 @@ We are a dedicated team working on a C++ project to build a robust user manageme
 
 ### SaltGenerator
 - **generateSalt()**: Generates a salt for password hashing.
-
-<img src="received_1170287757835882.png" width="300px" align="right" alt="Team Work Animation">
 
 ## 🚀 Getting Started
 
