@@ -4,7 +4,7 @@
 #include <algorithm>
 
 using namespace std;
-//principe: takes a password ,generates a salt than merges them into one string taking a caracter from each one alternatively and finally converts the resulting string into hexadecimal//
+//principe: takes a password ,generates a salt than merges them into one string taking a caracter from each one alternatively ,converts each caracter into ASCII code and finally converts the resulting string into hexadecimal//
 
 class IHash {
 public:
