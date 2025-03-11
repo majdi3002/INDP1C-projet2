@@ -11,7 +11,7 @@ We are a dedicated team working on a C++ project to build a robust user manageme
     <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
 </div>
 
-# User Authentication System
+<h1 align=center># User Authentication System</h1>h1>
 
 This project is a simple user authentication system implemented in C++. It allows users to register with a username and password, and then log in using their credentials. The system uses file-based storage to persist user data and includes basic password hashing and validation.
 
