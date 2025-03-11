@@ -20,7 +20,7 @@ This project is a simple user authentication system implemented in C++. It allow
 - **File-based Storage**: User data is stored in a text file (`dataset.txt`).
 ## Pattern
 <div align="center">
-    <img src="Diagram" width="500px" alt="Team Work Animation">
+    <img src="Diagram.png" width="500px" alt="Team Work Animation">
 </div>
 
 ## Classes and Components
