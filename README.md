@@ -22,6 +22,7 @@ This project is a simple user authentication system implemented in C++. It allow
 <div align="center">
     <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
 </div>
+
 ## Classes and Components
 
 ### Istorage (Interface)
