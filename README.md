@@ -11,55 +11,83 @@ We are a dedicated team working on a C++ project to build a robust user manageme
     <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
 </div>
 
-# <b> Let's Connect..!</b><img src="https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/handshake.gif" width ="80">
+# User Authentication System
 
-[![Hazem Bellili](https://img.shields.io/badge/-Hazem_Bellili-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:hazem.bellili@supcom.tn?subject=Contact%20from%20GitHub)
-[![Khalil Gabsi](https://img.shields.io/badge/-Khalil_Gabsi-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:khalil.gabsi@supcom.tn?subject=Contact%20from%20GitHub)
-[![Majdi Dridi](https://img.shields.io/badge/-Majdi_Dridi-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:Majdi.dridi@supcom.tn?subject=Contact%20from%20GitHub)
-[![Mouhaned Mouzayen](https://img.shields.io/badge/-Mouhaned_Mouzayen-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=white)](mailto:mouhaned.mouzayen@supcom.tn?subject=Contact%20from%20GitHub)
+This project is a simple user authentication system implemented in C++. It allows users to register with a username and password, and then log in using their credentials. The system uses file-based storage to persist user data and includes basic password hashing and validation.
 
-## 🛠️ Components
+## Features
+- **User Registration**: Users can register with a unique username and a password that meets specific complexity requirements.
+- **User Login**: Registered users can log in using their username and password.
+- **Password Hashing**: Passwords are hashed using a custom hashing algorithm combined with a randomly generated salt.
+- **Password Validation**: Passwords must meet complexity requirements (minimum length, uppercase, lowercase, digits, and special characters).
+- **File-based Storage**: User data is stored in a text file (`dataset.txt`).
 
-### UserService
-- **RegisterUser()**: Registers a new user.
-- **LoginUser()**: Authenticates a user.
+## Classes and Components
 
-### Istorage
-- **addUser()**: Adds a user to the storage.
-- **getAlldata()**: Retrieves all user data.
-- **userExists()**: Checks if a user exists.
-- **getUserInfo()**: Retrieves user information.
+### Istorage (Interface)
+**Purpose**: Defines the interface for storage operations.
 
-### Validator
-- **validate()**: Validates user input.
+**Methods**:
+- `addUser`: Adds a new user to the storage.
+- `getdata`: Retrieves all user data from storage.
+- `userExists`: Checks if a user exists in the storage.
+- `getUserInfo`: Retrieves user information (hashed password and salt) by username.
 
-### Hash
-- **hashPassword()**: Hashes the password.
+### FileManager (Class)
+**Purpose**: Implements the `Istorage` interface to manage user data in a file.
 
-### IsaltGenerator
-- **generateSalt()**: Generates a salt for password hashing.
+**Methods**:
+- `addUser`: Adds a new user to the file.
+- `getdata`: Reads all user data from the file.
+- `userExists`: Checks if a user exists in the file.
+- `getUserInfo`: Retrieves user information from the file.
 
-### FileManager
-- **addUser()**: Adds a user to the file.
-- **getAlldata()**: Retrieves all user data from the file.
-- **userExists()**: Checks if a user exists in the file.
-- **getUserInfo()**: Retrieves user information from the file.
+### SaltGenerator (Class)
+**Purpose**: Generates a random salt for password hashing.
 
-### PasswordValidator
-- **validate()**: Validates the password.
+**Methods**:
+- `generateSalt`: Generates a random string of specified length.
 
-### Hasher
-- **hashPassword()**: Hashes the password.
-- **alternate_characters()**: Alternates characters for hashing.
-- **to_hex()**: Converts the hashed password to hexadecimal.
+### IHash (Interface)
+**Purpose**: Defines the interface for password hashing.
 
-### SaltGenerator
-- **generateSalt()**: Generates a salt for password hashing.
+**Methods**:
+- `hashPassword`: Hashes the password.
 
-## 🚀 Getting Started
+### Hasher (Class)
+**Purpose**: Implements the `IHash` interface to hash passwords using a custom algorithm.
 
-To get started with the project, clone the repository and follow the instructions in the README.
+**Methods**:
+- `hashPassword`: Hashes the password by alternating characters with the salt and converting the result to a hexadecimal string.
 
+### IValidator (Interface)
+**Purpose**: Defines the interface for input validation.
+
+**Methods**:
+- `validate`: Validates the input (e.g., password).
+
+### PasswordValidator (Class)
+**Purpose**: Implements the `IValidator` interface to validate passwords.
+
+**Methods**:
+- `validate`: Ensures the password meets complexity requirements.
+
+### IuserService (Interface)
+**Purpose**: Defines the interface for user-related services.
+
+**Methods**:
+- `RegisterUser`: Registers a new user.
+- `LoginUser`: Logs in an existing user.
+
+### UserService (Class)
+**Purpose**: Implements the `IuserService` interface to handle user registration and login.
+
+**Methods**:
+- `RegisterUser`: Registers a new user by generating a salt, hashing the password, and storing the user data.
+- `LoginUser`: Logs in a user by verifying the username and password.
+
+## Usage
+
+### Compile the Code:
 ```bash
-git clone https://github.com/your-repo.git
-cd your-repo
+g++ -o user_auth main.cpp
