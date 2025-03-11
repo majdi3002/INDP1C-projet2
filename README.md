@@ -86,7 +86,7 @@ This project is a simple user authentication system implemented in C++. It allow
 - `RegisterUser`: Registers a new user by generating a salt, hashing the password, and storing the user data.
 - `LoginUser`: Logs in a user by verifying the username and password.
 
-## SOLID Principles
+## SOLID Principles Implementation
 
 ### 1. Single Responsibility Principle (SRP)
 Each class has a single responsibility and handles one aspect of the system:
