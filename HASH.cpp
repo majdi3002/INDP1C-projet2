@@ -11,7 +11,7 @@ protected:
     string salt;
 public:
     IHash(){}
-    virtual string hash_function() = 0;
+    virtual string hashPassword() = 0;
     virtual ~IHash() = default;
 };
 
@@ -21,7 +21,7 @@ public:
         password=pass;
         salt=sal;
     }
-    string hash_function() override {
+    string hashPassword() override {
         string alternated = alternate_characters(password, salt);
         string hashed = to_hex(alternated);
         return hashed;
@@ -55,7 +55,7 @@ int main() {
     string password = "khison";
     string salt = "since3456in";
     Hasher hasher(password,salt);
-    string hashed_password=hasher.hash_function();
+    string hashed_password=hasher.hashPassword();
     cout<<hashed_password;
     return 0;
 }
