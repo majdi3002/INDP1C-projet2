@@ -8,7 +8,7 @@ We are Team 1 in the C++ Project. Our project focuses on creating a user managem
 We are a dedicated team working on a C++ project to build a robust user management system.
 
 <div align="center">
-    <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
+    <img src="Diagram.png" width="500px" alt="Team Work Animation">
 </div>
 
 # User Authentication System
