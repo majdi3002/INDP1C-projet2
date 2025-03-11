@@ -218,6 +218,12 @@ int main() {
     while (true) {
         cout << "\n1. Register\n2. Login\n3. Exit\nChoose an option: ";
         cin >> choice;
+        if (!(cin >> choice)) {
+            cout << "Invalid input! Please enter a number.\n";
+            cin.clear(); // Clear error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            continue;
+        }
 
         if (choice == 1) {
             cout << "Enter username: ";
