@@ -53,7 +53,7 @@ We are a dedicated team working on a C++ project to build a robust user manageme
 
 ### SaltGenerator
 - **generateSalt()**: Generates a salt for password hashing.
-
+<img src="<img src="received_1170287757835882.png" width="300px" align="right" alt="Team Work Animation">" width="300px" align="right" alt="Team Work Animation">
 ## 🚀 Getting Started
 
 To get started with the project, clone the repository and follow the instructions in the README.
