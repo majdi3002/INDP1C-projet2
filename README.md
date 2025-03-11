@@ -7,9 +7,6 @@ We are Team 1 in the C++ Project. Our project focuses on creating a user managem
 **About Us**  
 We are a dedicated team working on a C++ project to build a robust user management system.
 
-<div align="center">
-    <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
-</div>
 
 <h1 align=center>User Authentication System</h1>
 
@@ -21,7 +18,10 @@ This project is a simple user authentication system implemented in C++. It allow
 - **Password Hashing**: Passwords are hashed using a custom hashing algorithm combined with a randomly generated salt.
 - **Password Validation**: Passwords must meet complexity requirements (minimum length, uppercase, lowercase, digits, and special characters).
 - **File-based Storage**: User data is stored in a text file (`dataset.txt`).
-
+## Pattern
+<div align="center">
+    <img src="received_1170287757835882.png" width="500px" alt="Team Work Animation">
+</div>
 ## Classes and Components
 
 ### Istorage (Interface)
