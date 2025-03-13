@@ -9,7 +9,7 @@ protected:
 
 public:
     virtual void addUser(const string&, const string&, const string&) = 0;
-    virtual vector<tuple<string, string, string>> getdata() = 0;
+    virtual vector<tuple<string, string, string>> getAlldata() = 0;
     virtual bool userExists(const string& Username)=0;
     virtual tuple<bool, string, string> getUserInfo(const string& Username)=0;
     virtual ~Istorage() {}
@@ -34,7 +34,7 @@ public:
         }
     }
 
-    vector<tuple<string, string, string>> getdata() override {
+    vector<tuple<string, string, string>> getAlldata() override {
         vector<tuple<string, string, string>> users;
         ifstream inFile(fileName);
 
@@ -58,7 +58,7 @@ public:
     }
 
     bool userExists(const string& Username) {
-        vector<tuple<string, string, string>> users = getdata();
+        vector<tuple<string, string, string>> users = getAlldata();
         for (const auto& [uname, pass, s] : users) {
             if (uname == Username) {
                 return true;
@@ -68,7 +68,7 @@ public:
     }
 
     tuple<bool, string, string> getUserInfo(const string& Username) {
-        vector<tuple<string, string, string>> users = getdata();
+        vector<tuple<string, string, string>> users = getAlldata();
         for (const auto& [uname, pass, s] : users) {
             if (uname == Username) {
                 return {true,pass, s}; // Return found user info
