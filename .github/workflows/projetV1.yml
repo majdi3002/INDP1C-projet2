@@ -1,10 +1,10 @@
-name: ProjetV1  # The name of the workflow, visible in the GitHub Actions tab.
+name: ProjetV1 # The name of the workflow, visible in the GitHub Actions tab.
 
 on:
-  push: # Trigger the workflow whenever code is pushed to the repository.
+  push:
     branches:
       - main # Runs only if changes are pushed to the 'main' branch.
-  pull_request: # Trigger the workflow when a pull request is created or updated.
+  pull_request:
 
 jobs:
   build-and-test: # The name of the job.
@@ -15,19 +15,19 @@ jobs:
       - name: Checkout code # Descriptive name for the step.
         uses: actions/checkout@v3 # Uses a prebuilt GitHub Action to clone the repo into the VM.
 
-      # Step 2: Install the GCC compiler
-      - name: Install GCC # Install the GNU Compiler Collection required for building C programs.
-        run: sudo apt-get install -y gcc # Installs GCC using the system's package manager.
+      # Step 2: Install necessary dependencies
+      - name: Install build essentials # Install necessary tools, including g++
+        run: sudo apt-get update && sudo apt-get install -y g++
 
       # Step 3: Compile the C++ program
-      - name: Build the program 
-        run: gcc -o ProjetV1 ProjetV1.c++ 
+      - name: Build the program
+        run: g++ -o ProjetV1 ProjetV1.cpp
 
       # Step 4: Run the compiled program
       - name: Run the test # Executes the compiled C++ program to perform the tests.
-        run: ./ProjetV1 # Runs the 'projetV1' executable, which performs its logic and outputs the results.
+        run: ./ProjetV1
 
       # Step 5: Check for test failures
-      - name: Check test result # Fail the job if the test results are not as expected.
-        if: failure() # This step runs only if the previous step (Run the test) fails.
-        run: exit 1 # Explicitly fails the job by exiting with a non-zero status code.
+      - name: Check test result
+        if: failure()
+        run: exit 1
