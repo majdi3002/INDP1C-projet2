@@ -6,7 +6,7 @@ using namespace std;
 
 class Istorage {
 protected:
-    string fileName = "dataset.txt";
+    string fileName = "database.txt";
 
 public:
     virtual void addUser(const string&, const string&, const string&) = 0;
