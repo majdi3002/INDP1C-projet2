@@ -21,11 +21,11 @@ jobs:
 
       # Step 3: Compile the C++ program
       - name: Build the program
-        run: g++ -o ProjetV1 ProjetV1.cpp
+        run: g++ -o projet-test projet-test.cpp
 
       # Step 4: Run the compiled program
       - name: Run the test # Executes the compiled C++ program to perform the tests.
-        run: ./ProjetV1
+        run: ./projet-test
 
       # Step 5: Check for test failures
       - name: Check test result
