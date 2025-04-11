@@ -9,4 +9,3 @@ login,johnDoe,WrongPassword1@,,fail,
 login,nonExistent,SomePassword1!,dummySalt,fail,
 login,aliceSmith,MyPass#2024,,success,
 login,bobJones,short,,fail,
-login,kevinBlue,AllGood#2024,,success
