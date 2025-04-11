@@ -22,6 +22,20 @@ This project is a simple user authentication system implemented in C++. It allow
 - **Password Validation**: Passwords must meet complexity requirements (minimum length, uppercase, lowercase, digits, and special characters).
 - **File-based Storage**: User data is stored in a text file (`dataset.txt`).
 
+**Registration:**
+1. User provides username and password
+2. System validates password meets requirements
+3. System generates random salt
+4. Password is hashed with salt
+5. Username, hashed password, and salt are stored
+
+**Login:**
+1. User provides username and password
+2. System retrieves stored hash and salt for username
+3. System hashes provided password with stored salt
+4. System compares new hash with stored hash
+5. Access granted if hashes match
+
 ## Classes and Components
 
 ### Istorage (Interface)
